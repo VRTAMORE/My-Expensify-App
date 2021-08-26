@@ -12,11 +12,6 @@ import getVisibleExpenses from './selectors/expenses';
 
 const store = configureStore();
 
-store.dispatch(expensesActions.addExpense({ description: 'Water bill', amount: 1500, createdAt: 200 }));
-store.dispatch(expensesActions.addExpense({ description: 'Gas bill', amount: 845, createdAt: 600 }));
-store.dispatch(expensesActions.addExpense({ description: 'Rent', amount: 10900, createdAt: 300 }));
-// store.dispatch(filtersActions.setTextFilter('wat'));
-
 // setTimeout(() => {
 //     store.dispatch(filtersActions.setTextFilter('bill'));
 // }, 3000);
@@ -24,8 +19,6 @@ store.dispatch(expensesActions.addExpense({ description: 'Rent', amount: 10900, 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 console.log(visibleExpenses);
-
-// console.log(store.getState());
 
 const jsx = (
     <Provider store={store}>
