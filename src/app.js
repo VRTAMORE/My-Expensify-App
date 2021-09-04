@@ -7,6 +7,9 @@ import './styles/styles.scss';
 
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
+import './firebase/firebase';
+
+// addCity();
 
 const store = configureStore();
 
